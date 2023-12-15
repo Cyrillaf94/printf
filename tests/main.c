@@ -5,7 +5,7 @@
 
 int main()
 {
-    char *strs[] = {"", "Testing", "ZKJHFJFJHFJS", "srgbskrugsk", "JGeqeHyg"}; // Test with %s
+    char *strs[] = {"", "Testing", "ZKJHFJFJHFJS", "srgbskru%gsk", "JGeq%%eHyg"}; // Test with %s
     char chars[] = {'\0', 'a', '%'}; // Test with %c
     int ints[] = {0, 2147483647, -2147483648,  11, -11}; // Test with %i and %d
     unsigned int uints[] = {0, 4294967295u, 56,  11}; // Test with %u and %x and %X
@@ -47,7 +47,4 @@ int main()
         ret_ft = ft_printf("  Custom printf: %p\n", ptrs[i]);
 		printf("Return values - std: %i, ft: %i\n", ret_std, ret_ft);
     }
-
-	printf("%i", printf(""));
-    return 0;
 }
