@@ -16,13 +16,6 @@ obj/%.o: src/%.c
 clean:
 	rm -f $(OBJ)
 
-test:
-	make
-	cp include/libftprintf.h tests/include
-	$(CC) $(CFLAGS) -g -o tests/test.out -I tests/include -Llib tests/main.c -lftprintf -lft
-	./test.out
-
-
 fclean: clean
 	rm -f $(NAME)
 
