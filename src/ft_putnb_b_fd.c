@@ -6,11 +6,12 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:29:19 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/15 09:47:40 by cyril            ###   ########.fr       */
+/*   Updated: 2023/12/23 17:24:29 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "libftprintf.h"
 
 ssize_t	ft_putnb_b_fd(unsigned int number, char *base, int fd)
 {
@@ -30,5 +31,5 @@ ssize_t	ft_putnb_b_fd(unsigned int number, char *base, int fd)
 		return (len_floor + len_mod);
 	}
 	else
-		return (ft_putchar_fd(base[number], fd));
+		return (ft_putchar_fd_st(base[number], fd));
 }

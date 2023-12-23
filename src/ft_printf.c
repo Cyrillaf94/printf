@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 09:42:25 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/15 09:46:45 by cyril            ###   ########.fr       */
+/*   Updated: 2023/12/23 17:22:43 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 #include "libft.h"
 #include "libftprintf.h"
 
-/*** Still to do: (1) fix return value, (2) Error handling if error*/
-
 static ssize_t	ft_handle_options(char c, va_list args)
 {
 	ssize_t	_len;
 
 	_len = 0;
 	if (c == 'c')
-		_len = ft_putchar_fd((char)va_arg(args, int), 1);
+		_len = ft_putchar_fd_st((char)va_arg(args, int), 1);
 	else if (c == 's')
-		_len = ft_putstr_fd(va_arg(args, char *), 1);
+		_len = ft_putstr_fd_st(va_arg(args, char *), 1);
 	else if (c == 'd' || c == 'i')
-		_len = ft_putnbr_fd(va_arg(args, int), 1);
+		_len = ft_putnbr_fd_st(va_arg(args, int), 1);
 	else if (c == 'u')
 		_len = ft_putnb_b_fd(va_arg(args, unsigned int), BASE_10, 1);
 	else if (c == 'x')
@@ -36,7 +34,7 @@ static ssize_t	ft_handle_options(char c, va_list args)
 	else if (c == 'p')
 		_len = ft_putptr_fd(va_arg(args, void *), 1);
 	else if (c == '%')
-		_len = ft_putchar_fd('%', 1);
+		_len = ft_putchar_fd_st('%', 1);
 	return (_len);
 }
 

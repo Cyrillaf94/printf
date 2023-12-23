@@ -1,24 +1,27 @@
-NAME := libft.a
+NAME := libftprintf.a
 HEADER_FOLDER := include
-SRC := 	ft_printf.c ft_putnbr_fd.c ft_putptr.c
-OBJ := 	ft_printf.o ft_putnbr_fd.o ft_putptr.o
+SRC := 	src/ft_printf.c src/ft_putnb_b_fd.c src/ft_putptr_fd.c
+OBJ := 	obj/ft_printf.o obj/ft_putnb_b_fd.o obj/ft_putptr_fd.o
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
-LIBS := ft
 
 all: $(NAME)
-
-bonus : $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ_BONUS)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+obj/%.o: src/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER_FOLDER)
 
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+	rm -f $(OBJ)
+
+test:
+	make
+	cp include/libftprintf.h tests/include
+	$(CC) $(CFLAGS) -g -o tests/test.out -I tests/include -Llib tests/main.c -lftprintf -lft
+	./test.out
+
 
 fclean: clean
 	rm -f $(NAME)

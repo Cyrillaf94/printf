@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 13:37:10 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/15 09:49:47 by cyril            ###   ########.fr       */
+/*   Updated: 2023/12/23 17:23:28 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static ssize_t	ft_putptr_addr_fd(uintptr_t address, int fd)
 		return (len_mod + len_floor);
 	}
 	else
-		return (ft_putchar_fd(BASE_16_LO[address % 16], fd));
+		return (ft_putchar_fd_st(BASE_16_LO[address % 16], fd));
 }
 
 ssize_t	ft_putptr_fd(void *ptr, int fd)
