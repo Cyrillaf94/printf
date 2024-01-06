@@ -6,7 +6,7 @@
 /*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 09:42:25 by cyril             #+#    #+#             */
-/*   Updated: 2024/01/06 16:40:56 by claferri         ###   ########.fr       */
+/*   Updated: 2024/01/06 18:13:23 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,14 @@ int	ft_printf(const char *format, ...)
 	len_written = 0;
 	result = 0;
 	va_start(args, format);
+	if (!format)
+		return (-1);
 	while (*format)
 	{
 		if (*format != '%')
-		{
-			result = write(1, format, 1);
-			format++;
-		}
+			result = write(1, format++, 1);
 		else if (*++format)
-		{
-			result = ft_handle_options(*format, args);
-			format++;
-		}
+			result = ft_handle_options(*format++, args);
 		if (result == -1)
 			return (-1);
 		len_written += result;

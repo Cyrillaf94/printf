@@ -6,7 +6,7 @@
 /*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:42:20 by cyril             #+#    #+#             */
-/*   Updated: 2024/01/06 16:52:28 by claferri         ###   ########.fr       */
+/*   Updated: 2024/01/06 18:14:21 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ void *ptrs[] = {(void *)NULL, (void *)"test", (void *)&ints[2],
 				(void *)&chars[0], (void *)&uints[0]};
 
 int ret_std, ret_ft;
+
+// Test with NULL
+printf(NULL);
+ft_printf(NULL);
 
 // Test with %s
 for (int i = 0; i < 8; i++) {
@@ -67,4 +71,5 @@ for (int i = 0; i < 5; i++) {
 	printf("Return values - std: %i, ft: %i\n", ret_std, ret_ft);
 }
 }
+
 */
