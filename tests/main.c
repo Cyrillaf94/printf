@@ -6,9 +6,11 @@
 /*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:42:20 by cyril             #+#    #+#             */
-/*   Updated: 2024/01/06 09:13:24 by claferri         ###   ########.fr       */
+/*   Updated: 2024/01/06 09:39:20 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
 
 #include "libftprintf.h"
 #include <unistd.h>
@@ -66,3 +68,4 @@ for (int i = 0; i < 5; i++) {
 }
 }
 
+*/
