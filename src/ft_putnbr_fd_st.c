@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd_st.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
+/*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 01:06:24 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/23 17:31:46 by cyril            ###   ########.fr       */
+/*   Updated: 2024/01/06 09:30:32 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include "libftprintf.h"
 
 ssize_t	ft_putnbr_fd_st(int n, int fd)
 {

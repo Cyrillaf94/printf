@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
+/*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 09:34:07 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/23 17:31:39 by cyril            ###   ########.fr       */
+/*   Updated: 2024/01/06 09:25:17 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 
 int		ft_printf(const char *format, ...);
 ssize_t	ft_putptr_fd(void *ptr, int fd);
-ssize_t	ft_putptr_fd(void *addr, int fd);
 ssize_t	ft_putnb_b_fd(unsigned int number, char *base, int fd);
 ssize_t	ft_putchar_fd_st(char c, int fd);
 ssize_t	ft_putnbr_fd_st(int n, int fd);

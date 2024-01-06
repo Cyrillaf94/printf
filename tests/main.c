@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
+/*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:42:20 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/23 17:42:21 by cyril            ###   ########.fr       */
+/*   Updated: 2024/01/06 09:13:24 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-/*
+
 int main()
 {
 char *strs[] = {"", "Testing", "ZKJHFJFJHFJS", "srgbskru%gsk",
@@ -65,10 +65,4 @@ for (int i = 0; i < 5; i++) {
 	printf("Return values - std: %i, ft: %i\n", ret_std, ret_ft);
 }
 }
-*/
 
-int	main(void)
-{
-	ft_printf("Main OK for sub");
-	return (0);
-}
