@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
+/*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 09:42:25 by cyril             #+#    #+#             */
-/*   Updated: 2024/01/06 09:30:36 by cyril            ###   ########.fr       */
+/*   Updated: 2024/01/06 16:40:56 by claferri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ int	ft_printf(const char *format, ...)
 			return (-1);
 		len_written += result;
 	}
+	va_end(args);
 	return ((int)(len_written));
 }
