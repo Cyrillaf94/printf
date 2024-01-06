@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: claferri <claferri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 17:42:20 by cyril             #+#    #+#             */
-/*   Updated: 2024/01/06 09:39:20 by claferri         ###   ########.fr       */
+/*   Updated: 2024/01/06 09:38:40 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int main()
 {
 char *strs[] = {"", "Testing", "ZKJHFJFJHFJS", "srgbskru%gsk",
-				"JGeq%%eHyg"};
+				"JGeq%%eHyg", NULL, "%", "a%%%"};
 char chars[] = {'\0', 'a', '%'};
 int ints[] = {0, 2147483647, -2147483648,  11, -11};
 unsigned int uints[] = {0, 4294967295u, 56,  11}; 
@@ -31,7 +31,7 @@ void *ptrs[] = {(void *)NULL, (void *)"test", (void *)&ints[2],
 int ret_std, ret_ft;
 
 // Test with %s
-for (int i = 0; i < 5; i++) {
+for (int i = 0; i < 8; i++) {
 	ret_std = printf("Standard printf: %s\n", strs[i]);
 	ret_ft = ft_printf("  Custom printf: %s\n", strs[i]);
 	printf("Return values - std: %i, ft: %i\n", ret_std, ret_ft);
@@ -67,5 +67,4 @@ for (int i = 0; i < 5; i++) {
 	printf("Return values - std: %i, ft: %i\n", ret_std, ret_ft);
 }
 }
-
 */

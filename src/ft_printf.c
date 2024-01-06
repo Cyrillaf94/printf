@@ -6,7 +6,7 @@
 /*   By: cyril <cyril@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 09:42:25 by cyril             #+#    #+#             */
-/*   Updated: 2023/12/23 17:22:43 by cyril            ###   ########.fr       */
+/*   Updated: 2024/01/06 09:30:36 by cyril            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_printf(const char *format, ...)
 			result = write(1, format, 1);
 			format++;
 		}
-		else if (*format++)
+		else if (*++format)
 		{
 			result = ft_handle_options(*format, args);
 			format++;
