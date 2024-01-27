@@ -1,7 +1,7 @@
 NAME := libftprintf.a
 HEADER_FOLDER := include
-SRC := 	src/ft_printf.c src/ft_putnb_b_fd.c src/ft_putptr_fd.c src/ft_putchar_fd_st.c  src/ft_putstr_fd_st.c src/ft_putnbr_fd_st.c
-OBJ := 	obj/ft_printf.o obj/ft_putnb_b_fd.o obj/ft_putptr_fd.o obj/ft_putchar_fd_st.o  obj/ft_putstr_fd_st.o obj/ft_putnbr_fd_st.o
+SRC := 	src/ft_printf.c src/ft_printf_utils.c
+OBJ := 	obj/ft_printf.o obj/ft_printf_utils.o
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
 
